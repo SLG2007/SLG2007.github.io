@@ -1,25 +1,54 @@
 <html lang="es">
 
     <head>
-        <title> Desayuno </title>
+        <title> Formulario </title>
     </head>
 
     <body>
-        <h1 align="center">Desayuno</h1>
-        <br> Desayuno <br>
-        <input type="radio" name="Desayuno" value="cafe" /> café
-        <input type="radio" name="Desayuno" value="colacao" /> colacao
-        <input type="radio" name="Desayuno" value="infusion" /> infusión
-        <br> Fichero adjunto <input type="file" name="adjunto" /> <br>
-        <input type="hidden" name="url_previa" value="/articulo/primero.html" />
-        <input type="submit" value="Enviame"><input type="Reset" name="Limpiar" value="Borrar datos del formulario"/>  
-            
+        
+        <form action="http://ncoge.com/phps/formulario.php" method="post">
+        Nombre: <input type="text" name="nombreUsuario"> <br>
+        <br>Apellidos: <input type="text" name="apellidoUsuario"> <br>
+        <br>Correo: <input type="text" name="correoUsuario"> <br>
+        <br> Hobbies: <textarea> </textarea> <br>
+
+
+        Nivel de idiomas <br/>
+        Inglés: 1<input type="radio" name="Ingles" value="1"/> 
+        2<input type="radio" name="Ingles" value="2"/> 
+        3<input type="radio" name="Ingles" value="3"/> 
+        4<input type="radio" name="Ingles" value="4"/> 
+        5<input type="radio" name="Ingles" value="5"/><br>
+        <br>
+        Francés: 1<input type="radio" name="Frances" value="1"/> 
+        2<input type="radio" name="Frances" value="2"/> 
+        3<input type="radio" name="Frances" value="3"/> 
+        4<input type="radio" name="Frances" value="4"/> 
+        5<input type="radio" name="Frances" value="5"/> <br>
+        <br>
+        Alemán: 1<input type="radio" name="Aleman" value="1"/> 
+        2<input type="radio" name="Aleman" value="2"/> 
+        3<input type="radio" name="Aleman" value="3"/> 
+        4<input type="radio" name="Aleman" value="4"/> 
+        5<input type="radio" name="Aleman" value="5"/> 
+
+
+
+        <br> <br> Writer <input name="programa" type="checkbox" value="writer"/> 
+        Base <input name="programa" type="checkbox" value="calc"/> <br>
+        Calc <input name="programa" type="checkbox" value="base"/> 
+        Impress <input name="programa" type="checkbox" value="impress"/> 
+
+
+
+
+
+
+      
         
         
-        
-        
-        
-    
+        <br><input type="reset" name="limpiar" value="Borrar datos del formulario" />
+        <input type="image" name="salir" src="iconosalida.svg"/>
 
     </body>
 
