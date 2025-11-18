@@ -1,5 +1,20 @@
 body{
-    background-image: url("../fondopagina.jpg");
+    background-image: url("../galaxiafondo.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
 
+h1{
+    background-color: black;
+    color: white;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: violet;
+    text-align: left;
+}
+
+img{
+    
 }
