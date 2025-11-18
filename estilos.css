@@ -5,7 +5,10 @@ body{
     background-attachment: fixed;
     background-position: center center;
     text-align: center;
+    font-family: "UnifrakturMaguntia", cursive;
 }
+
+
 
 h1{
     background-color: black;
