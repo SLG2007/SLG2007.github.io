@@ -12,7 +12,7 @@ body{
 
 h1{
     background-color: black;
-    color: a;
+    color: white;
     border-left-width: 10px;
     border-left-style: solid;
     border-left-color: violet;
@@ -36,4 +36,8 @@ li {
     display: inline;
     border: 4px solid violet;
 
+}
+
+a {
+    color: white
 }
