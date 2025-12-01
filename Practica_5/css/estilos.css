@@ -7,11 +7,11 @@ body {
 }
 
 h1 {
-
+    
 }
 
 img {
-  
+
 }
 
 ul {
@@ -27,7 +27,7 @@ p {
 }
 
 #header {
-  
+    border-bottom-width: thick;
 }
 
 #content{
@@ -79,7 +79,7 @@ p {
 
 }
 #image {
-
+    
 }
 
 @media all and (max-width: 500px) {
