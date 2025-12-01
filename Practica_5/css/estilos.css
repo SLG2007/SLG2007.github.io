@@ -27,7 +27,9 @@ p {
 }
 
 #header {
+    border-style: solid;
     border-bottom-width: thick;
+    
 }
 
 #content{
