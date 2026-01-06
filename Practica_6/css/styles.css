@@ -20,7 +20,7 @@ body {
     text-align: center;
 }
 
-.youtuber, .footer, .header {
+.youtuber, footer, header {
     /* 4- color de fondo */
     border: 1px solid lightgray;
     /* 5- redondear el borde */
@@ -29,7 +29,7 @@ body {
     padding: 20px;
     text-align: center;    
 }
-.footer {
+footer {
     padding: 0px;
     color: white;
 }
