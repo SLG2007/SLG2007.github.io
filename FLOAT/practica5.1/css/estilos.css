@@ -42,13 +42,11 @@ p {
 }
 
 #menu {
-  /*
-  Punto 1: Barra de menu siempre estara 
-  */
+  /*Punto 1: Barra de menu siempre estara */
   /* necesitas 3 instrucciones*/
-  /*1: */
-  /*2: */
-  /*3: */
+  /*1: */ position: fixed;
+  /*2: */ top: 0%;
+  /*3: */ width: 100%;
   text-align: center;  
   background-color: #097054;
   border: 1px solid #FF9900;
@@ -68,12 +66,10 @@ p {
 }
 
 #menu li a:hover{
-  /*
-  Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
-  */
+  /*Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul*/
   /* necesitas 2 instrucciones*/
-  /*1: */
-  /*2: */
+  /*1: */ border-bottom: 3px solid blue;
+  /*2: */ background-color: orange;
 }
 
 #footer{
@@ -109,43 +105,31 @@ p {
 
 
 #imageLeft {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-
+  /*Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla*/
   /* necesitas 1 instruccion*/
-  /*1: */
+  /*1: */ float: left;
   text-align: center;
   padding-bottom: 5px;
 }
 
 #imageRight {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la derecha de la pantalla
- */
-
+  /*Punto 2: La capa de las imagenes debe aparecer a la derecha de la pantalla*/
   /* necesitas 1 instruccion*/
-  /*1: */
+  /*1: */ float: right;
   text-align: center;
   padding-bottom: 5px;
 }
 
 #textMain {
-/*
-  Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla
- */
-
+  /*Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla*/
   /* necesitas 1 instruccion*/
   /*1: */
 }
 
 #imageToHide {
- /*
-  Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-
+ /*Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla*/
   /* necesitas 1 instruccion*/
-  /*1: */  
+  /*1: */
   text-align: center;
   margin-bottom: 40px;
 }
