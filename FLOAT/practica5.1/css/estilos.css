@@ -68,18 +68,16 @@ p {
 #menu li a:hover{
   /*Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul*/
   /* necesitas 2 instrucciones*/
-  /*1: */ border-bottom: 3px solid blue;
+  /*1: */ border-bottom: 3px solid #6599FF;
   /*2: */ background-color: orange;
 }
 
 #footer{
-  /*
-  Punto 6: Barra de pie de pagina siempre estara 
-  */
+  /*Punto 6: Barra de pie de pagina siempre estara*/
   /* necesitas 3 instrucciones*/
-  /*1: */
-  /*2: */
-  /*3: */
+  /*1: */ position: fixed;
+  /*2: */bottom: 0%;
+  /*3: */width: 100%;
   
   background-color: #097054;
   text-align: center;
@@ -123,13 +121,13 @@ p {
 #textMain {
   /*Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla*/
   /* necesitas 1 instruccion*/
-  /*1: */
+  /*1: */ clear:both;
 }
 
 #imageToHide {
  /*Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla*/
   /* necesitas 1 instruccion*/
-  /*1: */
+  /*1: */ float: left;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -139,15 +137,12 @@ p {
 }
 
 #cookieEU {
- /*
-  Punto 4: La capa esta posicionada casi al centro de la pantalla. Se diferencia del menu y del footer en que NO se queda fija al hacer scroll de la pagina.
- */
-
+ /*Punto 4: La capa esta posicionada casi al centro de la pantalla. Se diferencia del menu y del footer en que NO se queda fija al hacer scroll de la pagina.*/
   /* necesitas 4 instrucciones. 3 son distancia a los bordes :)*/
-  /*1: */  
-  /*2: */    
-  /*3: */    
-  /*4: */    
+  /*1: */ position:fixed;
+  /*2: */ bottom: 50%;
+  /*3: */ right: 8%;
+  /*4: */ left: 8%;
   border:2px solid red;
   background-color: white;
   margin-bottom: 5px;
@@ -156,13 +151,10 @@ p {
 }
 
 #textOverflow {
- /*
-  Punto 5: La capa tiene una barra de scroll vertical para que podamos leer el texto que no cabe en el tamaño. Solo vertical, no horizontal
- */
-
+ /*Punto 5: La capa tiene una barra de scroll vertical para que podamos leer el texto que no cabe en el tamaño. Solo vertical, no horizontal*/
   /* necesitas 2 instruccion*/
-  /*1: */  
-  /*2: */  
+  /*1: */  overflow-y: scroll; 
+  /*2: */  overflow-x: hidden;
   
   height: 250px;
   text-align: justify;
@@ -198,24 +190,20 @@ p {
 
 @media all and (max-width: 500px) {
   #imageLeft {
-    /*
-    Punto 7.1: Barra de menu siempre estara 
-    */
+    /*Punto 7.1: Barra de menu siempre estara */
     /* necesitas 1 instruccion*/
-    /*1: */
+    /*1: */ float: none;
     text-align: center;
     padding-bottom: 5px;
   }
 
   #imageRight {
-    /*
-    Punto 7.1: Barra de menu siempre estara 
-    */
+    /*Punto 7.1: Barra de menu siempre estara*/
     /* necesitas 1 instruccion*/
-    /*1: */
+    /*1: */float: none;
     text-align: center;
     clear: both;
-  padding-bottom: 5px;
+    padding-bottom: 5px;
   }
   
   #textCentral {
@@ -223,12 +211,9 @@ p {
   }
   
   #imageToHide {
-    /*
-    Punto 7.2: Barra de menu siempre estara 
-    */
+    /*Punto 7.2: Barra de menu siempre estara*/
     /* necesitas 1 instruccion*/
-    /*1: */
-
+    /*1: */float: none;
     text-align: center;
     margin-bottom: 40px;
   }
@@ -245,9 +230,7 @@ p {
 
 @media all and (max-width: 300px) {
   #header {
-    /*
-    Cambio el margen para que no lo tape el menu
-    */
+    /*Cambio el margen para que no lo tape el menu*/
     margin-top: 100px;
   }
 }
