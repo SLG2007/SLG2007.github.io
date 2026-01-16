@@ -1,0 +1,37 @@
+
+
+body {
+    /* 1- color de fondo */
+    background-color: #333333;
+    /* 2- ancho 90% */
+    width: 90%;
+    /* 3- centrar */
+    margin: auto;
+}
+
+#menu {
+    /* 9- quita los puntos */
+    list-style-type: none;
+}
+
+li {
+    /* 10- haz que los li no sean de tipo bloque */
+    display: inline;
+    /* 11- borde izquierdo rojo */
+    border-left: 4px red solid;
+    /* 12- separa el borde de la izquierda */
+    padding-left: 5px;
+}
+
+#menu a {
+    /* 13- enlaces blancos */
+    color: white;
+    /* 14- sin subrayado */
+    text-decoration: none;
+}
+
+#menu a:hover {
+    /* 15- cambia el color al subrayado*/ /*no he entendido esta parte porque en los apuntes pone que es el texto (o eso he entendido yo) así que pongo los 2*/
+    color: red;
+    border-bottom: 2px solid red;
+}
