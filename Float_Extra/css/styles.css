@@ -23,20 +23,31 @@ body {
     border-radius: 50px;
     margin-left: 5%;
     margin-right: 5%;
+    
 }
 
 li {
     display: inline;
     color: white;
+    
 }
 
 #menu a {
     color: white;
     text-decoration: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 150%;
+    
 }
 
 #menu a:hover {
-    color: #c4ffef;
+    color: #c0fded;
+    border-bottom: #c0fded;
+}
+
+header {
+    margin: 50px;
 }
 
 #cookie {
@@ -44,8 +55,8 @@ li {
     color: rgb(109, 200, 216);
     position:fixed;
     bottom: 50%;
-    right: 8%;
-    left: 8%;
+    right: 10%;
+    left: 10%;
     border:5px solid rgb(22, 118, 134);
     border-style: solid;
     border-radius: 40px;
@@ -71,4 +82,42 @@ li {
 
 .button:hover {
     background-color: rgb(11, 84, 97);
+}
+
+#texto1 {
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    height: 200px;
+    width: 50%;
+    text-align: justify;
+    border: 5px solid #319278;
+    background-color: white;
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+#texto2 {
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    height: 200px;
+    width: 50%;
+    text-align: justify;
+    border: 5px solid #319278;
+    background-color: white;
+    padding: 20px;
+    margin-right: 20px;
+
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    background-color: #44ad91;
+    border-top: 5px solid #319278;
+    text-align: center;
+    color: white;
 }
