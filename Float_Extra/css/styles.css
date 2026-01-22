@@ -1,37 +1,75 @@
-
+* {
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 body {
-    /* 1- color de fondo */
-    background-color: #333333;
-    /* 2- ancho 90% */
-    width: 90%;
-    /* 3- centrar */
+    background: url('../IMAGES/fondoacnh.webp');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
     margin: auto;
+    
 }
 
 #menu {
-    /* 9- quita los puntos */
     list-style-type: none;
+    text-align: center;
+    background-color: #44ad91;
+    border: 5px solid #319278;
+    border-radius: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 li {
-    /* 10- haz que los li no sean de tipo bloque */
     display: inline;
-    /* 11- borde izquierdo rojo */
-    border-left: 4px red solid;
-    /* 12- separa el borde de la izquierda */
-    padding-left: 5px;
+    color: white;
+    
 }
 
 #menu a {
-    /* 13- enlaces blancos */
     color: white;
-    /* 14- sin subrayado */
     text-decoration: none;
 }
 
 #menu a:hover {
-    /* 15- cambia el color al subrayado*/ /*no he entendido esta parte porque en los apuntes pone que es el texto (o eso he entendido yo) así que pongo los 2*/
-    color: red;
-    border-bottom: 2px solid red;
+    color: #c4ffef;
+}
+
+#cookie {
+    text-align: center;
+    color: rgb(109, 200, 216);
+    position:fixed;
+    bottom: 50%;
+    right: 8%;
+    left: 8%;
+    border:5px solid rgb(22, 118, 134);
+    border-style: solid;
+    border-radius: 40px;
+    background-color: white;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    box-shadow: 2px 2px 50px rgb(22, 118, 134);
+}
+#textCookie {
+  text-align: center;
+}
+
+.button {
+  	background-color: rgb(22, 118, 134);
+    border-radius: 50px;
+    color: white;
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: rgb(11, 84, 97);
 }
