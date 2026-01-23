@@ -96,17 +96,17 @@ header {
     flex-direction: column; 
     float: right;
     margin-right: 2%;
+    gap: 100px;
 }
 
 #info img {
     float:right;
     width: 50px;
-    padding-bottom: 500%;
-   
+    
+    
 }
 
 #info img:hover{
-    padding-bottom: 50%;
     border-bottom: rgb(11, 84, 97) solid;
 }
 
