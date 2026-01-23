@@ -47,7 +47,8 @@ li {
 }
 
 header {
-    margin: 50px;
+    margin-left: 200px;
+    font-size: 200%;
 }
 
 #cookie {
@@ -84,32 +85,41 @@ header {
     background-color: rgb(11, 84, 97);
 }
 
-#texto1 {
-    overflow-y: scroll; 
-    overflow-x: hidden;
-    height: 200px;
-    width: 50%;
-    text-align: justify;
-    border: 5px solid #319278;
-    background-color: white;
-    padding: 20px;
-    margin-right: 20px;
-    margin-left: 25%;
-    margin-right: 25%;
-
+#content {
+    background-color: grey;
+    
 }
 
-#texto2 {
+#info img {
+    float:right;
+    width: 50px;
+    display: block;
+}
+
+
+#texto {
     overflow-y: scroll; 
     overflow-x: hidden;
     height: 200px;
-    width: 50%;
+    width: 75%;
     text-align: justify;
     border: 5px solid #319278;
     background-color: white;
     padding: 20px;
-    margin-right: 20px;
+    margin-left: 10%;
+    float: left;
+}
 
+#der {
+    float: right;
+    width: 30%;
+    margin-left: 15px;
+}
+
+#izq {
+    float: left;
+    width: 30%;
+    margin-right: 15px;
 }
 
 footer{
