@@ -95,13 +95,13 @@ header {
     display: flex;
     flex-direction: column; 
     float: right;
-    gap: 100px;
     margin-right: 2%;
 }
 
 #info img {
     float:right;
     width: 50px;
+    padding-bottom: 500%;
    
 }
 
@@ -162,7 +162,7 @@ footer{
     color: white;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 700px) {
     header{
         margin-left: 25%;
     }
@@ -170,7 +170,10 @@ footer{
         width: 100%;
         flex-direction: row;
         justify-content: center;
-        gap: 30px;
+        
+    }
+    #info img {
+        padding-bottom: 10%;
     }
     #content {
         
