@@ -1,0 +1,31 @@
+.padre {
+    border: 5px black solid;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hijo{
+    border: 2px red solid;
+    width: 200px;
+    
+}
+
+
+.menu{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    
+}
+.menu img {
+    width: 50px;
+    margin-right: auto;
+}
+
+div img{
+    
+}
