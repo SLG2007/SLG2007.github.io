@@ -15,17 +15,25 @@
 }
 
 
-.menu{
-    align-items: center;
+
+.menu {
     display: flex;
-    gap: 10px;
     
 }
+
 .menu img {
     width: 50px;
     margin-right: auto;
 }
 
-div img{
+div {
+    align-items: center;
+    display: flex;
+    gap: 10px;
     
+}
+
+.derecha {    
+    display: flex;
+    flex-direction: column;
 }
