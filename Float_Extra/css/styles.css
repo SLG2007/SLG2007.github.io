@@ -92,17 +92,14 @@ header {
 
 #info {
     width: 20px;          
-    display: flex;
-    flex-direction: column; 
     float: right;
-    gap: 100px;
-    margin-right: 2%;
+    margin-right: 2%; 
 }
 
 #info img {
-    float:right;
+    float: right;
     width: 50px;
-   
+    margin-bottom: 100px;
 }
 
 #info img:hover{
@@ -162,19 +159,37 @@ footer{
     color: white;
 }
 
-@media (max-width: 1080px) {
-    header{
+@media (max-width: 800px) {
+
+    #menu a {
+        margin-left: -40px;;
+        font-size: 150%;
+    }
+
+    header {
         margin-left: 25%;
     }
+    
     #info {
         width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        gap: 30px;
+        position: absolute;
+        top: 790px;
+        text-align: center;
     }
-    #content {
+
+    #info a {
+        display: inline-block;  
+        margin-left: 30px;   
         
     }
 
-    
+    #der {
+        width: 50%;
+        height: 75%;  
+    }
+
+    #izq {
+        width: 50%;
+    }
+ 
 }
