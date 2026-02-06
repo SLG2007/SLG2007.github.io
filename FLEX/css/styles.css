@@ -1,0 +1,45 @@
+* {
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.tarjeta {
+    border: solid black 2px;
+    height: 500px;
+    width: 500px;
+    padding: 25px;
+    
+}
+
+img {
+    height: 100px;
+}
+
+.usuario {
+    background-color: gray;
+}
+
+.nombre{
+
+}
+
+.desc {
+
+}
+
+.num {
+
+}
+
+.categoria {
+
+}
+
+.boton {
+
+}
