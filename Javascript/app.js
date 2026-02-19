@@ -28,6 +28,20 @@ function numeroAleatorio(max) {
     return numero
 }
 
-let numero = numeroAleatorio(20)
+/*console.log(numero)*/
 
-console.log(numero)
+
+let resultado = document.getElementById("resultado")
+let numero = 0
+let cantidad = 0
+let carta = []
+while(cantidad<6) {
+    numero = numeroAleatorio(49)
+    if (!carta.includes(numero)) {
+        cantidad++
+        carta.push(numero)
+    }
+}
+console.log("El papel es: " + carta)
+
+resultado.innerHTML = carta
