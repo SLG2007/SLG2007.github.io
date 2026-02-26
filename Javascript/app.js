@@ -30,8 +30,8 @@ function numeroAleatorio(max) {
 
 /*console.log(numero)*/
 
-
-let resultado = document.getElementById("resultado")
+//loteria
+/*let resultado = document.getElementById("resultado")
 let numero = 0
 let cantidad = 0
 let carta = []
@@ -44,4 +44,24 @@ while(cantidad<6) {
 }
 console.log("El papel es: " + carta)
 
-resultado.innerHTML = carta
+resultado.innerHTML = carta*/
+
+//numero del cesar
+let abecedario = "abcdefghijklmnñopqrstuvwxyz"
+let frase="zzz  manzanas"
+let paso=3
+let fraseCifrada = ""
+for (let i=0; i<frase.length; i++) {
+
+    if (frase[i] === " "){
+        fraseCifrada = fraseCifrada + " "
+    }
+    else {
+        let pos = (abecedario.indexOf(frase[i]) + paso) % abecedario.length
+    let letraCifrada = abecedario[pos]
+    fraseCifrada += letraCifrada
+    }
+    
+ 
+}
+console.log(fraseCifrada)
