@@ -23,10 +23,10 @@ while(i<=10) {
 }*/
 
 
-function numeroAleatorio(max) {
+/*function numeroAleatorio(max) {
     let numero=Math.floor(Math.random() * max ) + 1
     return numero
-}
+}*/
 
 /*console.log(numero)*/
 
@@ -47,7 +47,7 @@ console.log("El papel es: " + carta)
 resultado.innerHTML = carta*/
 
 //numero del cesar
-let abecedario = "abcdefghijklmnñopqrstuvwxyz"
+/*let abecedario = "abcdefghijklmnñopqrstuvwxyz"
 let frase="zsza manzanas"
 let paso=3
 let fraseCifrada = ""
@@ -63,4 +63,43 @@ for (let i=0; i<frase.length; i++) {
         fraseCifrada += letraCifrada
     }
 }
-console.log(fraseCifrada)
+console.log(fraseCifrada)*/
+
+
+//contraseña segura
+
+let caracteres = "abcdefghijklmnopqrstuvwxyz";
+let caracteresMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let caracteresNumeros = "0123456789"
+let caracteresEspeciales = "!@#$%^&*()_+|~`-={}[]:;'<>?,./"
+
+// devuelve un valor aleatorio entre min y max
+function numeroAleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let numCar = numeroAleatorio(8,50)
+let numNum = numeroAleatorio(1,2)
+let numEsp = numeroAleatorio(1,2)
+let pswd = ""
+
+for (let i=0; i<numNum; i++){
+    pswd += caracteresNumeros[numeroAleatorio(0,caracteresNumeros.length-1)]
+}
+for (let i=0; i<numEsp; i++){
+    pswd += caracteresEspeciales[numeroAleatorio(0,caracteresEspeciales.length-1)]
+}
+
+pswd += caracteresMayusculas[numeroAleatorio(0,caracteresMayusculas.length-1)]
+longitud = pswd.length
+for (let i=0; i<numCar - longitud; i++) {
+    let opcion = numeroAleatorio(1,2)
+
+    if (opcion == 1)
+        pswd += caracteresMayusculas[numeroAleatorio(0,caracteresMayusculas.length-1)]
+    else
+        pswd += caracteres[numeroAleatorio(0,caracteres.length-1)]
+}
+
+pswd = pswd.split('').sort(() => Math.random() - 0.5).join('')
+console.log(pswd)
