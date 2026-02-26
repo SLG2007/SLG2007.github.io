@@ -56,12 +56,11 @@ for (let i=0; i<frase.length; i++) {
     if (frase[i] === " "){
         fraseCifrada = fraseCifrada + " "
     }
+    
     else {
         let pos = (abecedario.indexOf(frase[i]) + paso) % abecedario.length
-    let letraCifrada = abecedario[pos]
-    fraseCifrada += letraCifrada
+        let letraCifrada = abecedario[pos]
+        fraseCifrada += letraCifrada
     }
-    
- 
 }
 console.log(fraseCifrada)
