@@ -48,7 +48,7 @@ resultado.innerHTML = carta*/
 
 //numero del cesar
 let abecedario = "abcdefghijklmnñopqrstuvwxyz"
-let frase="zzz  manzanas"
+let frase="zsza manzanas"
 let paso=3
 let fraseCifrada = ""
 for (let i=0; i<frase.length; i++) {
@@ -56,7 +56,7 @@ for (let i=0; i<frase.length; i++) {
     if (frase[i] === " "){
         fraseCifrada = fraseCifrada + " "
     }
-    
+
     else {
         let pos = (abecedario.indexOf(frase[i]) + paso) % abecedario.length
         let letraCifrada = abecedario[pos]
