@@ -42,4 +42,5 @@ while (pswd.length < numCar) {
 pswd = pswd.split('').sort(() => Math.random() - 0.5).join('')
 console.log(pswd)
 salida = "Tiene " + numCar + " caracteres, " + numNum + " números, " + numEsp + " caracteres especiales y " + numMay + " mayúsculas: " + pswd
+
 resultado.innerHTML = salida

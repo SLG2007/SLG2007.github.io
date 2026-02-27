@@ -6,6 +6,7 @@ function numeroAleatorio(max) {
 }
 
 let resultado = document.getElementById("resultado")
+
 let numero = 0
 let cantidad = 0
 let carta = []
