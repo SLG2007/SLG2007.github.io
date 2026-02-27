@@ -26,12 +26,12 @@ while(i<=10) {
 /*function numeroAleatorio(max) {
     let numero=Math.floor(Math.random() * max ) + 1
     return numero
-}*/
+}
 
 /*console.log(numero)*/
 
 //loteria
-/*let resultado = document.getElementById("resultado")
+l/*et resultado = document.getElementById("resultado")
 let numero = 0
 let cantidad = 0
 let carta = []
@@ -68,7 +68,7 @@ console.log(fraseCifrada)*/
 
 //contraseña segura
 
-let caracteres = "abcdefghijklmnopqrstuvwxyz";
+/*let caracteres = "abcdefghijklmnopqrstuvwxyz";
 let caracteresMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let caracteresNumeros = "0123456789"
 let caracteresEspeciales = "!@#$%^&*()_+|~`-={}[]:;'<>?,./"
@@ -102,4 +102,4 @@ for (let i=0; i<numCar - longitud; i++) {
 }
 
 pswd = pswd.split('').sort(() => Math.random() - 0.5).join('')
-console.log(pswd)
+console.log(pswd)*/
