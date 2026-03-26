@@ -1,8 +1,8 @@
 //frase boomer
 
 let boton = document.getElementById("boton")
-let texto = document.getElementById("texto")
 let resultado = document.getElementById("resultado")
+let frase = document.getElementById("frase")
 
 
 function numeroAleatorio(max) {
@@ -25,8 +25,8 @@ function cambiaVocales(frase) {
 
 boton.addEventListener("click", (e) => {
     
-    let texto=cambiaVocales(frase.value)
-    resultado.innerHTML+=texto + "<br>"  
+    let fraseBoomer=cambiaVocales(frase.value)
+    resultado.innerHTML+=fraseBoomer + "<br>"  
 
 })
 
