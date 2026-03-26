@@ -3,8 +3,7 @@
 let boton = document.getElementById("boton")
 let texto = document.getElementById("texto")
 let resultado = document.getElementById("resultado")
-let fraseBoomer = ""
-let numMay = numeroAleatorio(1,2)
+
 
 function numeroAleatorio(max) {
     return Math.floor(Math.random() * max);
@@ -26,20 +25,9 @@ function cambiaVocales(frase) {
 
 boton.addEventListener("click", (e) => {
     
-    //let texto=frase.value + "<br>"
-    
     let texto=cambiaVocales(frase.value)
-    resultado.innerHTML+=texto + "<br>"
-        
-        
-      
-        
+    resultado.innerHTML+=texto + "<br>"  
+
 })
 
 
-
-
-
-
-
-resultado.innerHTML = fraseBoomer
