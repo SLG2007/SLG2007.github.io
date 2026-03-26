@@ -111,7 +111,7 @@ main {
 .news {
     display: flex;
     gap: 30px; 
-    flex: wrap;
+    flex-wrap: wrap;
 }
 
 .card {
