@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hora</h1>
+    <input type="button" id="boton" value="Tiempo?">
+    <div id="resultado">¿Qué hora es?</div>
+    <script>
+        let boton = document.getElementById("boton")
+        let resultado = document.getElementById("resultado")
+
+        function leerHora (){
+            return "10:30"
+        }
+
+        boton.addEventListener("click",(e) => {
+            
+            let hora = leerHora()
+            console.log("Me han pulsado")
+            resultado.innerHTML="Hora"
+        }) 
+    </script>
+</body>
+</html>
