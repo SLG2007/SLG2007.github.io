@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1>Hora</h1>
-    <input type="button" id="boton" value="Tiempo?">
-    <div id="resultado">¿Qué hora es?</div>
+    <input type="button" id="boton" value="Gato?">
+    <div id="resultado">Dame un gato</div>
     <script>
         let boton = document.getElementById("boton")
         let resultado = document.getElementById("resultado")
-        let url="https://timeapi.io/api/Time/current/zone?timeZone=Europe/Madrid"
+        let url="https://api.thecatapi.com/v1/images/search"
 
         function leerHora (){
             fetch(url)
@@ -22,9 +22,9 @@
             })
             .then (data => {
                 console.log("######")
-                console.log(data.time)
-                hora = data.time
-                resultado.innerHTML=hora
+                console.log(data[0].url)
+                img = data[0].url
+                resultado.innerHTML="<a href=' "+img+"'>"+img+"</a>"
             })
             .catch (error => console.log("ERROR: " + error))
             //return hora
