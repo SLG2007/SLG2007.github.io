@@ -5,7 +5,6 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     
 </head>
 <body>
@@ -31,9 +30,8 @@
         function creaElemento(valor, clave) {            
             let total= Math.round(parseFloat(cantidad.value)*parseFloat(valor)*100)/ 100
             /*  ACABALO  */
-            cantidad = cantidad.getAttribute
-            let liElement = document.createElement(li)
-            liElement.innerHTML = moneda + " (" + valor + clave + ") " + "==> " + cantidad + " " + moneda + " = " + (cantidad*valor) + " " + clave
+            let liElement = document.createElement("li")
+            liElement.innerHTML = moneda + " (" + valor + clave + ") " + "==> " + cantidad.value + " " + moneda + " = " + total + " " + clave
             
             /*  FIN ACABALO  */    
             return liElement
@@ -58,7 +56,7 @@
                         
                         //usa creaElemento(valor, clave)
                         /*  FIN ACABALO  */    
-                        resultado.append = creaElemento(valor,clave)
+                        resultado.appendChild(creaElemento(valor,clave))
                     });
                     
                 })
