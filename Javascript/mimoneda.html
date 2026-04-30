@@ -32,10 +32,11 @@
             let total= Math.round(parseFloat(cantidad.value)*parseFloat(valor)*100)/ 100
             /*  ACABALO  */
             cantidad = cantidad.getAttribute
-        
-            let liElement = moneda + 
+            let liElement = document.createElement(li)
+            liElement.innerHTML = moneda + " (" + valor + clave + ") " + "==> " + cantidad + " " + moneda + " = " + (cantidad*valor) + " " + clave
+            
             /*  FIN ACABALO  */    
-            //return liElement
+            return liElement
         }
 
         
@@ -52,21 +53,23 @@
                     let cambios=Object.entries(datos.rates)                    
 
                     cambios.forEach(([clave, valor]) => {
-                        console.log(clave, valor);
+                        console.log(clave, valor)
                         /*  ACABALO  */
                         
-            
                         //usa creaElemento(valor, clave)
                         /*  FIN ACABALO  */    
+                        resultado.append = creaElemento(valor,clave)
                     });
                     
                 })
-                .catch(error => console.log(error));                        
+                .catch(error => console.log(error))                     
         }
         //eventos
-        convertirBtn.addEventListener("click", function(){
+        convertirBtn.addEventListener("click", function() {
             resultado.innerHTML=""
             convertir()
+
+            
         })
 
         
