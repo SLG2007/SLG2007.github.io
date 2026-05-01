@@ -161,7 +161,7 @@
         </div>
 
         <div class="pensando">
-            <p id="ordenadorElige">Ordenador Pensando elección ...</p>
+            <p id="ordenadorElige"></p>
         </div>
 
         <div class="resultados">
@@ -176,6 +176,7 @@
     </div>
     
     <script>
+        let jugar = true
         let tiempoPensar=5;
         const opciones = ["piedra", "papel", "tijera", "lagarto", "spock"];
         const reglas = {
@@ -194,9 +195,13 @@
 
         listaOpciones.addEventListener("change", function() {
             /*  ACABALO  */
-
-            /*  FIN ACABALO  */            
-
+            /*  FIN ACABALO  */   
+            if (jugar) {
+                jugadorEscoge = listaOpciones.value
+                document.getElementById("ordenadorElige").textContent = "Ordenador Pensando elección ...";
+                descuenta();
+            }         
+            
         });
 
         // decide quien gana
@@ -237,28 +242,42 @@
 
         // reinicia la partida
         function reiniciar() {
+            jugar = true
             jugadorEscoge = undefined;
             ordenadorEscoge = undefined;
             tiempoPensar = 5;
             listaOpciones.value = "";
-            document.getElementById("ordenadorElige").textContent = "Ordenador Pensando elección ...";
+            document.getElementById("ordenadorElige").textContent = "";
             eleccionesEl.innerHTML = "Elige una opción para jugar.";
             resultadoEl.className = "resultado-veredicto veredicto-espera";
             resultadoEl.textContent = "—";
             btnReiniciar.style.display = "none";
-            descuenta();
+            //descuenta();
         }
 
         //Promesa cuando pase el tiempo establecido el ordenador escoge
         function descuenta(){
             /*  ACABALO  */
+            /*  FIN ACABALO  */ 
 
-            /*  FIN ACABALO  */            
+            const esperar = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    document.getElementById("ordenadorElige").textContent = "";
+                    quienGana(jugadorEscoge, opciones[Math.floor(Math.random() * (4 + 1))])
+                    jugar = false
+                }, 5000);
+                
+                
+            })
+            
+                      
 
         }
 
         // el ordenador escoge tras pasar un tiempo
-        descuenta();
+        // he modificado un poco el código para que no deje cambiar de opción si no le das a reiniciar (con un booleano)
+        //descuenta();
+        
 
     </script>
 
