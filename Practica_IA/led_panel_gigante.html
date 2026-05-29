@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel LED Gigante</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #eee;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            text-align: center;
+            width: 95%;
+            max-width: 1200px;
+        }
+
+        header h1 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .input-section {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #textInput {
+            padding: 15px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            border: 2px solid #333;
+            background: #1a1a1a;
+            color: white;
+            width: 50%;
+            min-width: 300px;
+        }
+
+        #updateBtn {
+            padding: 15px 30px;
+            background: #ffcc00;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #updateBtn:hover {
+            background: #e6b800;
+        }
+
+        /* --- PANEL LED GIGANTE --- */
+        .led-container {
+            position: relative;
+            width: 100%;
+            background: #000;
+            border: 15px solid #222;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8), inset 0 0 60px rgba(0,0,0,1);
+            padding: 40px 0;
+        }
+
+        .led-screen {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Más alto */
+            background-image: 
+                radial-gradient(circle, #111 1px, transparent 1px),
+                radial-gradient(circle, #111 1px, transparent 1px);
+            background-size: 6px 6px; 
+            background-position: 0 0, 3px 3px;
+            display: flex;
+            align-items: center;
+        }
+
+        .led-text {
+            position: absolute;
+            white-space: nowrap;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 8rem; /* Texto mucho más grande */
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ffff00;
+            text-shadow: 0 0 15px #ffff00, 0 0 30px #ffff00;
+            animation: scroll-text 12s linear infinite;
+        }
+
+        @keyframes scroll-text {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #colorSelect, #bgSelect {
+            padding: 8px;
+            background: #1a1a1a;
+            color: white;
+            border: 1px solid #333;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>✨ Panel LED Gigante</h1>
+            <p>Personaliza tu mensaje y los colores para que te vean desde lejos</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="textInput" placeholder="Escribe tu mensaje aquí..." maxlength="100">
+            <button id="updateBtn">Actualizar Panel 🚀</button>
+        </div>
+
+        <div class="led-container">
+            <div id="ledScreen" class="led-screen">
+                <div id="ledText" class="led-text">¡ENCUÉNTRAME!</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="colorSelect">Color del Texto:</label>
+                <select id="colorSelect">
+                    <option value="#ff0000">Rojo</option>
+                    <option value="#00ff00">Verde</option>
+                    <option value="#0000ff">Azul</option>
+                    <option value="#ffff00" selected>Amarillo</option>
+                    <option value="#ff00ff">Magenta</option>
+                    <option value="#00ffff">Cian</option>
+                    <option value="#ffffff">Blanco</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="bgSelect">Color Fondo LED:</label>
+                <select id="bgSelect">
+                    <option value="#000000" selected>Negro</option>
+                    <option value="#1a1a1a">Gris Oscuro</option>
+                    <option value="#000033">Azul Marino</option>
+                    <option value="#330000">Granate</option>
+                    <option value="#003300">Verde Bosque</option>
+                    <option value="#220022">Púrpura</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textInput = document.getElementById('textInput');
+            const updateBtn = document.getElementById('updateBtn');
+            const ledText = document.getElementById('ledText');
+            const colorSelect = document.getElementById('colorSelect');
+            const bgSelect = document.getElementById('bgSelect');
+
+            function updateLED() {
+                const newText = textInput.value.trim();
+                if (newText !== "") {
+                    ledText.textContent = newText;
+                    ledText.style.animation = 'none';
+                    ledText.offsetHeight; 
+                    ledText.style.animation = null;
+                }
+            }
+
+            updateBtn.addEventListener('click', updateLED);
+
+            colorSelect.addEventListener('change', () => {
+                const color = colorSelect.value;
+                ledText.style.color = color;
+                ledText.style.textShadow = `0 0 15px ${color}, 0 0 30px ${color}`;
+            });
+
+            bgSelect.addEventListener('change', () => {
+                const bgColor = bgSelect.value;
+                document.getElementById('ledScreen').style.backgroundColor = bgColor;
+            });
+
+            textInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    updateLED();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
